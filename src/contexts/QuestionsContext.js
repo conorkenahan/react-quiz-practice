@@ -17,9 +17,9 @@ useEffect(() => {
   }, []);
 
   return (
-    <AuthContext.Provider value={value}>
+    <AuthQuestions.Provider value={value}>
       {children}
-    </AuthContext.Provider>
+    </AuthQuestions.Provider>
   );
 };
 

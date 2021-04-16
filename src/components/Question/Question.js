@@ -1,9 +1,6 @@
 import React, {useEffect} from 'react';
-import { useQuestionsContext } from '../../contexts/QuestionsContext.js';
 
-
-const Homepage = () => {
- const { questions } = useQuestionsContext();
+const Homepage = ({ questions }) => {
 
     useEffect(() => {
         console.log(questions)
