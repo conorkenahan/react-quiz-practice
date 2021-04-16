@@ -1,18 +1,24 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 
-const Homepage = ({ questions }) => {
 
-    useEffect(() => {
-        console.log(questions)
-    })
+const Question = ({ question }) => {
+    console.log(question);
 
+    const answers = [decodeURIComponent(question.incorrect_answers)];
+    const randomizeAnswers = answers[Math.floor(Math.random()*answers.length)];
+
+    console.log(answers, randomizeAnswers);
+    
     return (
         <div>
-            {questions.map(result => {
-                return <p>{result.question}</p>
-            })}
+            <h3>{decodeURIComponent(question.question)}</h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
         </div>
     )
 }
 
-export default Homepage;
+
+export default Question;
