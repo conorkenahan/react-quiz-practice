@@ -20,7 +20,7 @@ const RenderQuestions = () => {
 
     return (
         <div>
-            {questions && <Question question={questions[count]}/>}
+            {questions && <Question question={questions[count] || []}/>}
         </div>
     )
 }
